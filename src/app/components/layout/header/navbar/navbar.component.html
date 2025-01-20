@@ -1,0 +1,16 @@
+<nav
+  [ngClass]="{ hidden: !isMobileMenuActive }"
+  [class.active]="isMobileMenuActive"
+  class="absolute flex flex-col justify-between top-0 right-0 z-50 px-6 pt-8 bg-white md:bg-transparent w-[70vw] h-full mobile-menu md:block md:top-auto md:right-auto md:w-auto lg:w-[40vw] md:rounded-full md:relative md:py-2 md:px-6"
+>
+  <ul class="flex flex-col gap-y-6 md:gap-x-6 md:flex-row lg:justify-evenly">
+    @for(link of navigationLinks; track $index) {
+    <li>
+      <a [routerLink]="link.path" class="text-gray-700 capitalize">{{
+        link.name
+      }}</a>
+    </li>
+    }
+  </ul>
+  <app-button [label]="'connect'" [customStyle]="'w-full mb-6 md:hidden'" />
+</nav>
