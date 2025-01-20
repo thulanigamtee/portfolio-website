@@ -1,0 +1,28 @@
+<header class="flex items-center justify-between mt-6">
+  <button class="flex items-end gap-x-1">
+    <ul class="flex gap-x-1">
+      @for(char of name; track $index) {
+      <li>
+        <span class="text-xl font-bold">{{ char }}</span>
+      </li>
+      }
+    </ul>
+    <span class="block w-3 h-3 -translate-y-2 bg-green-500 rounded-full"></span>
+  </button>
+  <app-navbar [isMobileMenuActive]="isMobileMenuActive" />
+  <div class="flex items-center gap-x-4 md:gap-x-8">
+    <button>
+      <img src="/assets/dark.png" width="25" />
+    </button>
+    <app-button [label]="'connect'" [customStyle]="'hidden md:block'" />
+    <button
+      [class.active]="isMobileMenuActive"
+      (click)="toggleMobileMenu()"
+      class="z-50 flex flex-col mobile-menu-btn gap-y-1 md:hidden"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
