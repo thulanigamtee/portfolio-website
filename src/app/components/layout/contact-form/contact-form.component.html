@@ -1,0 +1,47 @@
+<section class="text-center px-[5%] lg:px-[10%]">
+  <br /><br /><br /><br />
+  <span class="font-ovo">Connect with me</span>
+  <br />
+  <h1 class="text-5xl font-ovo">Get in touch</h1>
+  <br />
+  <p>I'd love to hear about what you're working on and how I could help.</p>
+  <br />
+  <form
+    [formGroup]="contactForm"
+    class="flex flex-col items-center justify-center gap-y-8"
+  >
+    <div class="grid grid-cols-2 gap-4">
+      <app-input
+        [placeholder]="'Enter name'"
+        [type]="'text'"
+        [id]="'name'"
+        [label]="'name'"
+        [control]="contactForm.get('name')"
+      />
+      <app-input
+        [placeholder]="'Enter email'"
+        [type]="'email'"
+        [id]="'email'"
+        [label]="'email'"
+        [control]="contactForm.get('email')"
+      />
+    </div>
+    <app-button
+      [label]="'submit form'"
+      [customStyle]="'bg-[#242424] text-white'"
+    >
+      <svg
+        width="15"
+        height="15"
+        viewBox="0 0 17 11"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.0839 4.73429C16.2592 4.89461 16.3591 5.12116 16.3591 5.35876C16.3591 5.59636 16.2592 5.82291 16.0839 5.98323L11.148 10.4961C10.8031 10.8114 10.2679 10.7875 9.95252 10.4426C9.63719 10.0977 9.66111 9.56246 10.006 9.24712L13.3334 6.20492L0.846159 6.20492C0.378842 6.20492 0 5.82607 0 5.35876C0 4.89145 0.378842 4.5126 0.846159 4.5126L13.3334 4.5126L10.006 1.47038C9.66111 1.15504 9.63719 0.619818 9.95252 0.274923C10.2679 -0.0699711 10.8031 -0.0938883 11.148 0.221447L16.0839 4.73429Z"
+          fill="white"
+        />
+      </svg>
+    </app-button>
+  </form>
+</section>
