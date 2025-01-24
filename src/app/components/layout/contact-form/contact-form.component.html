@@ -1,16 +1,10 @@
-<section class="text-center px-[5%] lg:px-[10%]">
-  <br /><br /><br /><br />
-  <span class="font-ovo">Connect with me</span>
-  <br />
-  <h1 class="text-5xl font-ovo">Get in touch</h1>
-  <br />
-  <p>I'd love to hear about what you're working on and how I could help.</p>
-  <br />
+<section class="px-[5%] lg:px-[10%] mt-24">
+  <app-section-info [info]="info" />
   <form
     [formGroup]="contactForm"
-    class="flex flex-col items-center justify-center gap-y-8"
+    class="flex flex-col items-center justify-center mt-10 gap-y-8"
   >
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid w-full md:w-[600px] grid-cols-2 gap-4">
       <app-input
         [placeholder]="'Enter name'"
         [type]="'text'"
@@ -25,6 +19,19 @@
         [label]="'email'"
         [control]="contactForm.get('email')"
       />
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Enter message"
+        formControlName="message"
+        [ngClass]="{
+          invalid:
+            contactForm.get('message')?.invalid &&
+            contactForm.get('message')?.touched
+        }"
+        class="font-ovo border h-40 border-[#24242478] outline-none rounded-md py-2 pl-4 text-[#242424] focus:border-[#242424] placeholder:font-outfit col-span-2"
+      >
+      </textarea>
     </div>
     <app-button
       [label]="'submit form'"
