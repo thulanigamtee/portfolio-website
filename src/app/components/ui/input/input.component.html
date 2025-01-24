@@ -1,1 +1,18 @@
-<p>input works!</p>
+<div class="flex flex-col">
+  <!-- <div class="flex justify-between">
+    <label [for]="id" class="text-gray-700 capitalize">{{ label }}</label>
+    @if (control?.errors?.required && control?.touched || control?.dirty) {
+    <span class="text-sm text-red-600">Field is required</span>
+    }
+  </div> -->
+  <input
+    [id]="id"
+    [formControl]="control"
+    [type]="type"
+    [placeholder]="placeholder"
+    [ngClass]="{
+      invalid: control?.invalid && control?.touched
+    }"
+    class="font-ovo border border-[#24242478] outline-none rounded-md py-3 pl-4 text-[#242424] focus:border-[#242424] placeholder:font-outfit"
+  />
+</div>
