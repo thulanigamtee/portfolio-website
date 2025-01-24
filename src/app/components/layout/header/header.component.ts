@@ -2,15 +2,14 @@ import { Component, inject } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { OverlayService } from '../../../services/overlay.service';
+import { LogoComponent } from '../../shared/logo/logo.component';
 
 @Component({
   selector: 'app-header',
-  imports: [NavbarComponent, ButtonComponent],
+  imports: [NavbarComponent, ButtonComponent, LogoComponent],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  name = ['T', 'h', 'u', 'l', 'a', 'n', 'i'];
-
   overlayService = inject(OverlayService);
 
   isMobileMenuActive = false;
