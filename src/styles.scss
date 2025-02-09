@@ -3,25 +3,48 @@
 @tailwind utilities;
 
 body {
-  max-width: 1440px;
-  margin-inline: auto;
-  @apply bg-gray-100 px-[5%] lg:px-[10%];
+  @apply bg-gray-100 max-w-[1440px] mx-auto;
+}
+
+label,
+span,
+p,
+h1,
+h2,
+h3,
+a {
+  @apply font-ovo;
+}
+
+p {
+  @apply text-gray-700;
+}
+
+a {
+  @apply text-[#242424];
+}
+
+input,
+textarea {
+  &.invalid {
+    @apply border-red-500;
+  }
 }
 
 .mobile-menu-btn {
   span {
-    @apply block w-6 h-1 bg-gray-700 rounded-full transition-all duration-300 ease-in-out;
+    @apply block w-6 h-[2px] bg-gray-700 rounded-full transition-all duration-300 ease-in-out;
   }
   &.active {
     span {
       &:first-of-type {
-        @apply rotate-45 origin-[6.3px];
+        @apply rotate-45 origin-[2px];
       }
       &:nth-of-type(2) {
         @apply hidden;
       }
       &:last-of-type {
-        @apply -rotate-45 origin-[6.3px];
+        @apply -rotate-45 origin-[2px];
       }
     }
   }
