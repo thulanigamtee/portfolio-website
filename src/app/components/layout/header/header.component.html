@@ -2,7 +2,7 @@
   <app-logo />
   <app-navbar [isMobileMenuActive]="isMobileMenuActive" />
   <div class="flex items-center gap-x-4 md:gap-x-8">
-    <button>
+    <!-- <button>
       <svg
         width="25"
         height="25"
@@ -17,27 +17,29 @@
           stroke-width="0.5"
         />
       </svg>
-    </button>
-    <app-button
-      [label]="'connect'"
-      [customStyle]="'hidden md:flex md:items-center gap-x-3'"
-    >
-      <svg
-        width="10"
-        height="10"
-        viewBox="0 0 13 13"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    </button> -->
+    <a [href]="'https://za.linkedin.com/in/thulani-gamteni-8845ab207'">
+      <app-button
+        [label]="'connect'"
+        [customStyle]="'hidden md:flex md:items-center gap-x-3'"
       >
-        <path
-          d="M1 12L12 1M12 1H2.1M12 1V10.9"
-          stroke="#242424"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </app-button>
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 13 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 12L12 1M12 1H2.1M12 1V10.9"
+            stroke="#242424"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </app-button>
+    </a>
     <button
       [class.active]="isMobileMenuActive"
       (click)="toggleMobileMenu()"
