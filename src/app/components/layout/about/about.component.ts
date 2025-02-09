@@ -11,6 +11,6 @@ export class AboutComponent {
     subTitle: 'Introduction',
     title: 'About me',
     descripition:
-      'I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.',
+      'I am an experienced Full Stack Software Developer with almost three years of expertise in the field. Throughout my career, I have had the opportunity to work on a variety of projects, which has allowed me to develop a wide range of skills. I am passionate about creating high-quality software and am always looking for ways to improve my skills.',
   };
 }
