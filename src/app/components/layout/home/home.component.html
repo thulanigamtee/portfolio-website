@@ -1,11 +1,14 @@
-<section class="flex flex-col items-center justify-center text-center">
+<section
+  id="home"
+  class="flex flex-col items-center justify-center text-center px-[5%]"
+>
   <img
     src="/assets/illustration-colored.png"
     alt="coder-illustration"
     class="md:max-w-[360px]"
   />
   <div class="flex items-center justify-center gap-x-2">
-    <span class="font-ovo text-xl text-[#242424]">Hi, I'm Thulani Gamteni</span>
+    <span class="text-xl">Hi! I'm Thulani Gamteni</span>
     <img
       src="/assets/waving-hand.png"
       alt="waving-hand"
@@ -14,21 +17,24 @@
     />
   </div>
   <div class="flex flex-col my-6 gap-y-4">
-    <h1 class="font-ovo text-6xl text-[#242424]">
+    <h1 class="text-6xl">
       Fullstack<br />
       software developer
     </h1>
-    <p class="font-ovo text-[#242424]">
-      I am a fullstack software developer with 2 years of experience building
-      web applications.
+    <p>
+      I am a Full Stack Software Developer with almost 3 years of hands on
+      experience
+      <br />
+      building web applications.
     </p>
   </div>
   <div class="flex flex-col items-center gap-4 md:flex-row">
     <app-button
-      [label]="'connect with me'"
+      [label]="'Get in touch'"
       [customStyle]="'bg-[#242424] text-white'"
+      (buttonEvent)="scrollToSection('contact')"
     >
-      <svg
+      <!-- <svg
         width="15"
         height="15"
         viewBox="0 0 17 11"
@@ -39,9 +45,20 @@
           d="M16.0839 4.73429C16.2592 4.89461 16.3591 5.12116 16.3591 5.35876C16.3591 5.59636 16.2592 5.82291 16.0839 5.98323L11.148 10.4961C10.8031 10.8114 10.2679 10.7875 9.95252 10.4426C9.63719 10.0977 9.66111 9.56246 10.006 9.24712L13.3334 6.20492L0.846159 6.20492C0.378842 6.20492 0 5.82607 0 5.35876C0 4.89145 0.378842 4.5126 0.846159 4.5126L13.3334 4.5126L10.006 1.47038C9.66111 1.15504 9.63719 0.619818 9.95252 0.274923C10.2679 -0.0699711 10.8031 -0.0938883 11.148 0.221447L16.0839 4.73429Z"
           fill="white"
         />
+      </svg> -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="white"
+      >
+        <path
+          d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z"
+        />
       </svg>
     </app-button>
-    <app-button [label]="'my resume'">
+    <!-- <app-button [label]="'my resume'">
       <svg
         width="15"
         height="15"
@@ -58,6 +75,6 @@
           fill="#242424"
         />
       </svg>
-    </app-button>
+    </app-button> -->
   </div>
 </section>
