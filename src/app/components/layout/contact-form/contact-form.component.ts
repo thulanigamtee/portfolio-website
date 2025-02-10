@@ -9,6 +9,7 @@ import {
 import { ButtonComponent } from '../../ui/button/button.component';
 import { SectionInfoComponent } from '../../shared/section-info/section-info.component';
 import { NgClass } from '@angular/common';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact-form',
@@ -38,5 +39,29 @@ export class ContactFormComponent {
       email: ['', [Validators.email, Validators.required]],
       message: ['', Validators.required],
     });
+  }
+
+  sendEmail() {
+    if (this.contactForm.invalid) {
+      alert('Please fill out all fields correctly.');
+      return;
+    }
+
+    emailjs
+      .send(
+        'service_8mhlvub',
+        'template_zwbgkcj',
+        this.contactForm.value,
+        'pL_LER6KeBstCSd0W'
+      )
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        alert('Message sent successfully!');
+        this.contactForm.reset();
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        alert('Failed to send message.');
+      });
   }
 }
