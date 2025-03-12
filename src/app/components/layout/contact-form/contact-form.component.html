@@ -6,22 +6,32 @@
     class="flex flex-col items-center justify-center mt-10 gap-y-8"
   >
     <div class="grid w-full md:w-[600px] grid-cols-2 gap-4">
-      <app-input
-        [placeholder]="'Enter name'"
-        [type]="'text'"
-        [id]="'name'"
-        [label]="'name'"
-        [control]="contactForm.get('name')"
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Enter name"
+        [ngClass]="{
+          invalid:
+            contactForm.get('name')?.invalid && contactForm.get('name')?.touched
+        }"
+        class="font-ovo border border-[#24242478] outline-none rounded-md py-3 pl-4 text-[#242424] focus:border-[#242424] placeholder:font-outfit"
       />
-      <app-input
-        [placeholder]="'Enter email'"
-        [type]="'email'"
-        [id]="'email'"
-        [label]="'email'"
-        [control]="contactForm.get('email')"
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Enter email"
+        [ngClass]="{
+          invalid:
+            contactForm.get('email')?.invalid &&
+            contactForm.get('email')?.touched
+        }"
+        class="font-ovo border border-[#24242478] outline-none rounded-md py-3 pl-4 text-[#242424] focus:border-[#242424] placeholder:font-outfit"
       />
       <textarea
         id="message"
+        type="text"
         name="message"
         placeholder="Enter message"
         formControlName="message"

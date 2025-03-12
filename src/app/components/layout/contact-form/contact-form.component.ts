@@ -57,6 +57,7 @@ export class ContactFormComponent {
       .then((response) => {
         console.log('Email sent successfully!', response);
         alert('Message sent successfully!');
+        console.log(this.contactForm.value);
         this.contactForm.reset();
       })
       .catch((error) => {
