@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { InputComponent } from '../../ui/input/input.component';
 import {
   FormBuilder,
   FormGroup,
@@ -14,7 +13,6 @@ import emailjs from '@emailjs/browser';
 @Component({
   selector: 'app-contact-form',
   imports: [
-    InputComponent,
     ButtonComponent,
     ReactiveFormsModule,
     SectionInfoComponent,
