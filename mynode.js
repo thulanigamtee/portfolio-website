@@ -5,7 +5,7 @@ const checkSign = "\u{2705}";
 const dotenv = require("dotenv").config({ path: "src/.env" });
 
 const envFile = `export const environment = {
-    production: false,
+    production: true,
     appwrite: {
     endpoint: '${process.env.endpoint}',
     projectId: '${process.env.projectId}',
